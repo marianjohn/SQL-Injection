@@ -1,0 +1,11 @@
+SQL Query Injection
+%27 - indication of query injection, it indictates apostrophe and it breaks out a SQL query and helps in injecting code.
+SELECT * FROM users WHERE username = 'John';
+if the user inputs
+John' OR 1=1--
+the query becomes
+SELECT * FROM users WHERE username = 'John' OR 1=1--';
+-- -> makes the rest of the query as comments.
+As a result from ths injection the user will get all rows from the users table.
+
+
